@@ -1,4 +1,4 @@
-# PieceOut — Jeu de puzzle en C++
+# PieceOut - Jeu de puzzle en C++
 
 **PieceOut** est un projet universitaire de programmation orientée objet réalisé à l'**Université Paris Cité**. Inspiré des pièces de Tetris, ce jeu de réflexion propose **quatre puzzles** dans lesquels le joueur manipule des pièces pour atteindre une configuration cible.
 
@@ -121,4 +121,4 @@ Les étapes suivantes sont reprises de la documentation originale du projet.
 - **Fatoumata Ndour**
 - **Abdoulbasti Mukaila Alh Shittu**
 
-*Projet universitaire — Université Paris Cité.*
+*Projet universitaire - Université Paris Cité.*

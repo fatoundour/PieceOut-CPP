@@ -1,65 +1,79 @@
-# Projet PieceOut
+# PieceOut — Jeu de puzzle en C++
 
-## Auteurs
-Fatoumata NDOUR 22321513
+**PieceOut** est un projet universitaire de programmation orientée objet réalisé à l'**Université Paris Cité**. Inspiré des pièces de Tetris, ce jeu de réflexion propose **quatre puzzles** dans lesquels le joueur manipule des pièces pour atteindre une configuration cible.
 
-Abdoulbasti MUKAILA ALH SHITTU 22024114
+Le projet a été développé en binôme par **Fatoumata Ndour** et **Abdoulbasti Mukaila Alh Shittu**.
 
-**Université :** Université Paris Cité
+## Fonctionnalités
 
-## Description du projet
+- Interface graphique interactive développée avec **SFML**.
+- Quatre puzzles accessibles depuis l'interface du jeu.
+- Manipulation des pièces par **déplacement**, **rotation** et **symétrie**, selon les règles de chaque puzzle.
+- Modélisation orientée objet des pièces, des opérations et du plateau.
 
-Le projet **PieceOut** est un exercice en C++ visant à démontrer la maîtrise de plusieurs concepts de programmation vus durant le semestre, tels que la gestion de la construction, destruction, copie des objets, l’héritage, la généricité, les exceptions, et les énumérations. L’objectif est de créer un jeu de puzzle inspiré de Tetris, où l'utilisateur doit manipuler des pièces dans un espace restreint afin d’atteindre une configuration spécifique.
+## Technologies et concepts
 
-Chaque puzzle présente un ensemble de pièces pouvant être déplacées et tournées selon des règles spécifiques. Le but du jeu est de résoudre le puzzle en respectant ces contraintes. Le programme utilise des concepts de programmation orientée objet, et s'inspire des patrons de conception **Decorator** et **Visitor** pour gérer les transformations des pièces.
+- **Langage :** C++11
+- **Interface graphique :** SFML (graphismes, fenêtres, audio)
+- **Compilation :** GNU Make et g++
+- **Programmation orientée objet :** classes, héritage, polymorphisme et gestion des objets
+- **Patrons de conception abordés :** Decorator et Visitor
 
-Le jeu présente plusieurs niveaux de difficulté et permet de visualiser les mouvements nécessaires pour parvenir à la solution d’un puzzle donné.
+## Organisation du projet
 
-Ce projet est conçu pour être joué via une interface graphique en utilisant la bibliothèque **SFML**, permettant de gérer les interactions et le rendu visuel des pièces.
+```text
+include/
+  Modele/       # Déclarations des classes du modèle
+  Vue/          # Déclarations des composants graphiques
+source/
+  Modele/       # Logique des pièces, opérations et plateau
+  Vue/          # Interface graphique et quatre puzzles
+ressources/     # Images et sons du jeu
+Makefile        # Règles de compilation
+Rapport PieceOut.pdf
+Projet2024.pdf
+```
+
+Les fichiers `ebaucheModel.cpp` et `ebaucheVue.cpp` correspondent aux ébauches fournies dans le cadre du projet pédagogique.
 
 ## Prérequis
 
-Avant de pouvoir exécuter le programme, vous devez disposer des éléments suivants :
+Un compilateur **g++** compatible C++11, **GNU Make** et les bibliothèques de développement **SFML** sont nécessaires. Les commandes ci-dessous correspondent à la configuration prévue dans le Makefile du projet ; la compilation n'a pas encore été revérifiée sur un environnement neuf.
 
-- Un compilateur C++ (par exemple, `g++`).
+## Compiler et lancer le jeu
 
-- La bibliothèque **SFML** pour la gestion des fenêtres et des graphismes. Si vous ne l'avez pas déjà installée, suivez les instructions sur [le site de SFML](https://www.sfml-dev.org/download.php).
-
-## Installation
-
-1. Décompressez les fichiers fournis dans un répertoire de votre choix.
-2. Ouvrez un terminal dans ce répertoire.
-
-## Compilation
-
-Le projet utilise **Make** pour faciliter la compilation. Exécutez les commandes suivantes pour compiler le modèle et la vue séparément : 
-
-1. Pour compiler le modèle et la vue, exécutez :
+À la racine du dépôt :
 
 ```bash
-make all_vue 
+make all_vue
 ```
 
-Le programme sera automatiquement lancé après la compilation. Si vous souhaitez rejouer après la fin du programme, exécutez la commande suivante pour relancer le jeu :
+Le Makefile compile le jeu puis tente de lancer l'exécutable. Pour le relancer ensuite :
 
 ```bash
-./build/ProgramVue 
+./build/ProgramVue
 ```
 
-## Nettoyage
-
-Pour nettoyer les fichiers compilés, utilisez les commandes suivantes dans le terminal :
+Pour nettoyer les fichiers générés :
 
 ```bash
 make clean_modele
 make clean_vue
 ```
 
-# Utilisation
+> **Remarque :** les ressources graphiques et sonores doivent rester accessibles aux chemins attendus par le programme. Le fonctionnement dépend également de la version de SFML installée.
 
-Une fois le programme lancé, une fenêtre s'ouvrira avec les quatre puzzles proposés. Utilisez votre souris pour cliquer sur l'un des puzzles.
+## Documentation
 
-## Instructions pour résoudre les puzzles
+- **Rapport PieceOut.pdf** : rapport de réalisation du projet.
+- **Projet2024.pdf** : sujet pédagogique initial.
+- **architecturePieceOut-diagramme modele.drawio.jpg** : diagramme d'architecture du modèle.
+- **README.pdf** : documentation complémentaire fournie avec le projet.
+
+<details>
+<summary><strong>Solutions détaillées des quatre puzzles</strong></summary>
+
+Les étapes suivantes sont reprises de la documentation originale du projet.
 
 ### Puzzle 1
 1. Une rotation sur la pièce verte.
@@ -98,3 +112,13 @@ Une fois le programme lancé, une fenêtre s'ouvrira avec les quatre puzzles pro
 5. Une rotation de la pièce bleue.
 6. Une rotation suivie de deux déplacements de la pièce rouge.
 7. Une rotation suivie d'un déplacement à gauche, une rotation, deux déplacements en bas, une rotation, un déplacement à gauche, trois rotations, puis deux déplacements vers le bas de la pièce verte.
+
+
+</details>
+
+## Auteurs
+
+- **Fatoumata Ndour**
+- **Abdoulbasti Mukaila Alh Shittu**
+
+*Projet universitaire — Université Paris Cité.*

@@ -1,0 +1,14 @@
+# Fichiers compilés C++
+*.o
+*.obj
+*.exe
+*.out
+/build/
+
+# Environnements de développement
+.vscode/
+.idea/
+
+# Fichiers temporaires
+*~
+.DS_Store

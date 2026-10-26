@@ -4,6 +4,9 @@
 
 Le projet a été développé en binôme par **Fatoumata Ndour** et **Abdoulbasti Mukaila Alh Shittu**.
 
+## 🎮 Démonstration du jeu
+[Capture vidéo du 2026-10-26 11-59-40.webm](https://github.com/user-attachments/assets/383fede2-07b8-4273-b683-84c0f47a8704)
+
 ## Fonctionnalités
 
 - Interface graphique interactive développée avec **SFML**.
